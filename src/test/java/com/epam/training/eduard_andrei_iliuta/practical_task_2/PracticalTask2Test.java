@@ -76,7 +76,7 @@ public class PracticalTask2Test {
         // tagName — validate that buttons exist on the page
         assertFalse(webDriver.findElements(SEARCH_BUTTON_TAG).isEmpty(), "Not empty");
 
-        // accept cookies
+        // accept cookies if is displayed or pass if not
         wait.until(driver -> {
             try {
                 WebElement acceptButton = driver.findElement(ACCEPT_COOKIES_SELECTOR);
