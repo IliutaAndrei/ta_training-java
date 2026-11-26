@@ -35,7 +35,7 @@ public class PracticalTask2Test {
             By.cssSelector("[data-testid='country-dropdown'] input[role='combobox']");
     private static final By LOCATION_OPTION =
             By.xpath("//div[@role='option' and @data-testid='dropdown-option']"
-                     + "[span[normalize-space(.)='Romania']]");
+                     + "[span[normalize-space(.)='All available countries']]");
     private static final By LOCATION_VALUE = By.cssSelector(
             "[data-testid='country-dropdown'] [data-testid='dropdown-value']");
     private static final By SEARCH_KEYWORD_INPUT =
@@ -68,7 +68,7 @@ public class PracticalTask2Test {
     }
 
     @ParameterizedTest
-    @CsvSource("Romania, Java")
+    @CsvSource("All available countries, Java")
     public void containsSearchedKeyword(String location, String keyword) {
 
         Wait<WebDriver> wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
